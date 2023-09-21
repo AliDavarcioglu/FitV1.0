@@ -44,10 +44,13 @@ class SecondFragment : Fragment() {
             val kullaniciAdi = SecondFragmentArgs.fromBundle(it).username
         }
 
-        binding.backButton.setOnClickListener {
+        binding.returnLogin.setOnClickListener {
             val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
             Navigation.findNavController(it).navigate(action)
+
         }
+
+
     }
 
 

@@ -7,30 +7,111 @@
     tools:context=".FirstFragment">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/passwordText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="77dp"
-        android:gravity="center"
-        android:text="First Fragment"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/custom_edit"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/girisButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <TextView
+        android:id="@+id/login_here"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="57dp"
+        android:gravity="center_horizontal|top"
+        android:text="Login Here"
+        android:textColor="#1F41BB"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/nextButton"
-        android:layout_width="121dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="272dp"
-        android:text="Next"
+        android:id="@+id/girisButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#1F41BB"
+        android:onClick="giris_yap"
+        android:text="Sign in "
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/returnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+    <Button
+        android:id="@+id/returnCreate"
+        android:layout_width="195dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="returnCreate"
+        android:text="Create New Account"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/girisButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="117dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:gravity="center"
+        android:text="Or continue with"
+        android:textColor="#1F41BB"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/returnCreate" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/custom_edit"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_here" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
