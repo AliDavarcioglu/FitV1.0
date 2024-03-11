@@ -1,21 +1,17 @@
-package com.example.fitv10
+package com.example.fitv10.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import com.example.fitv10.databinding.FragmentFirstBinding
-import com.example.fitv10.databinding.FragmentSecondBinding
+import com.example.fitv10.databinding.FragmentExerciseBinding
 
 
-class SecondFragment : Fragment() {
+class ExerciseFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FragmentExerciseBinding? = null
     private val binding get() = _binding!!
-
-    //FragmentSecondBinding hangi fragmentte olduğuna göre değişir.
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,31 +23,31 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentExerciseBinding.inflate(inflater, container, false)
         val view = binding.root
+
+
         return view
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         arguments?.let {
-            val kullaniciAdi = SecondFragmentArgs.fromBundle(it).username
+            binding.textView2.text = ExerciseFragmentArgs.fromBundle(it).gonder
         }
 
-        binding.returnLogin.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
-            Navigation.findNavController(it).navigate(action)
+
 
         }
+
+
 
 
     }
 
-
-}

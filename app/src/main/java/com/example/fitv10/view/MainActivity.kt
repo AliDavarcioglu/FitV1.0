@@ -1,13 +1,21 @@
-package com.example.fitv10
+package com.example.fitv10.view
 
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitv10.databinding.ActivityMainBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +26,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
     }
+
 
 //    fun firstFragment(view:View){
 //        val fragmentManager = supportFragmentManager
